@@ -3,21 +3,26 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 // Import images
-import course1 from "../../assets/courses-images/1.png";
-import course2 from "../../assets/courses-images/2.png";
-import course3 from "../../assets/courses-images/3.png";
-import course4 from "../../assets/courses-images/4.png";
-import course5 from "../../assets/courses-images/5.png";
+
+import beginnerGuitarCourse from '../../assets/courses-images/beginner-Guitar-Course.jpg';
+import advancedGuitarCourse from '../../assets/courses-images/advanced-Guitar-Course.jpg';
+import beginnerPianoCourse from '../../assets/courses-images/beginner-Piano-Course.jpeg';
+import advancedPianoCourse from '../../assets/courses-images/advanced-Piano-Course.jpeg';
+import authenticPastaCooking from '../../assets/courses-images/master-Authentic-Pasta-Cooking.jpg';
+import artOfKhichdi from '../../assets/courses-images/mastering-the-Art-of-Khichdi.jpg';
+import potatoCulinary from '../../assets/courses-images/potato-Lovers-Culinary-Course.jpg';
+import chessOpenings from '../../assets/courses-images/mastering-Opening-Strategy.jpg';
+import queensGambit from '../../assets/courses-images/mastering-the-Queens-Gambit.jpeg';
 
 const MyCourses = () => {
   const [courses, setCourses] = useState([]);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
+  console.log(courses);
   // Function to refresh the token
   async function refreshToken() {
-    try {
-      const response = await axios.post(
+    const response = await axios.post(
         "http://localhost:3000/auth/refresh-token",
         {},
         {
@@ -29,14 +34,12 @@ const MyCourses = () => {
       const newToken = response.data.token;
       localStorage.setItem("token", newToken);
       return newToken;
-    } catch (error) {
-      throw error;
-    }
   }
 
   // Function to fetch purchased courses
   async function fetchPurchasedCourses() {
     try {
+      //console.log(localStorage.getItem("token"));
       let token = localStorage.getItem("token");
       const response = await axios.get(
         "http://localhost:3000/purchased/purchased-courses",
@@ -46,12 +49,13 @@ const MyCourses = () => {
           },
         }
       );
+      const uniqueCourses = removeDuplicates(response.data); 
       setCourses(uniqueCourses);
     } catch (error) {
       if (error.response && error.response.status === 403) {
         // Token might be expired, try refreshing it
         try {
-          token = await refreshToken();
+          let token = await refreshToken();
           const response = await axios.get(
             "http://localhost:3000/purchased/purchased-courses",
             {
@@ -60,6 +64,10 @@ const MyCourses = () => {
               },
             }
           );
+
+          // Log each course ID to inspect consistency
+          console.log("Fetched Courses after Token Refresh:", response.data);
+
           const uniqueCourses = removeDuplicates(response.data);
           setCourses(uniqueCourses);
         } catch (refreshError) {
@@ -104,11 +112,15 @@ const MyCourses = () => {
 
   // Map course names to imported images
   const imageMap = {
-    "Learn About Kafka and Node.js": course1,
-    "React, but with webpack": course2,
-    "Learn About Terraform in Depth": course3,
-    "Kubernetes and Docker for deployment": course4,
-    "Create your own Serverless web app": course5,
+    "PlayCraftAcademy: Start Your Acoustic Guitar Journey": beginnerGuitarCourse,
+    "PlayCraftAcademy: Master Advanced Guitar Techniques": advancedGuitarCourse,
+    "PlayCraftAcademy: Piano Basics for Beginners": beginnerPianoCourse,
+    "PlayCraftAcademy: Refine Your Advanced Piano Skills": advancedPianoCourse,
+    "PlayCraftAcademy: Master Authentic Pasta Cooking": authenticPastaCooking,
+    "PlayCraftAcademy: Mastering the Art of Khichdi": artOfKhichdi,
+    "PlayCraftAcademy: Potato Lovers’ Culinary Course": potatoCulinary,
+    "PlayCraftAcademy: Master Chess Opening Strategies": chessOpenings,
+    "PlayCraftAcademy: Mastering the Queen's Gambit": queensGambit
   };
 
   const handleCourseClick = (courseId) => {
@@ -129,7 +141,7 @@ const MyCourses = () => {
               {courses.map((course) => (
                 <div
                   className="bg-[#001313] overflow-hidden text-green-300 hover:text-green-400 shadow-sm shadow-green-300 rounded-sm hover:shadow-green-300 transform transition-transform duration-300 hover:scale-105"
-                  key={course.id}
+                  key={course.id} 
                 >
                   <img
                     src={imageMap[course.name]}

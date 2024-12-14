@@ -3,36 +3,61 @@ import { useParams } from "react-router-dom";
 
 const courseDetailsData = {
   1: {
-    course_name: "Real-Time Data Streaming",
-    syllabus: "Learn about Kafka Architecture, Use Kafkajs with Node.js",
-    instructor_bio: "John Doe is a seasoned Kafka expert...",
-    prerequisites: "a little bit of Node.js knowledge, and you laptop, yes, just that.."
+    course_name: "PlayCraftAcademy: Start Your Acoustic Guitar Journey",
+    syllabus: "Learn the basics of acoustic guitar, including tuning, chords, and strumming techniques.",
+    instructor_bio: "Alex Rivera is a professional guitarist with over 15 years of experience teaching beginners.",
+    prerequisites: "Your passion for music and an acoustic guitar to start your journey."
   },
   2: {
-    course_name: "Create React App with Webpack",
-    syllabus: "enhance your app, advanced state management",
-    instructor_bio: "Jane Smith is a leading React developer...",
-    prerequisites: "No Preq. Let’s just dive in…"
+    course_name: "PlayCraftAcademy: Master Advanced Guitar Techniques",
+    syllabus: "Dive into advanced techniques like fingerstyle, barre chords, and lead guitar soloing.",
+    instructor_bio: "Sophia Carter is a seasoned guitarist known for her expertise in complex techniques.",
+    prerequisites: "Basic knowledge of guitar playing and enthusiasm to level up your skills."
   },
   3: {
-    course_name: "Learn about Terraform in detail",
-    syllabus: "Learn to Create CI/CD pipelines, Automate the deployment process",
-    instructor_bio: "Mike Johnson has over 10 years of Terraform experience...",
-    prerequisites: "Just you and your Laptop."
+    course_name: "PlayCraftAcademy: Piano Basics for Beginners",
+    syllabus: "Understand the fundamentals of piano, learn scales, chords, and simple melodies.",
+    instructor_bio: "Liam Johnson, a pianist with 10+ years of experience, makes learning fun and easy.",
+    prerequisites: "Access to a piano or keyboard and a passion to learn."
   },
   4: {
-    course_name: "Learn in depth about Kubernetes",
-    syllabus: "Create clusters, Learn the intricacies of K8s",
-    instructor_bio: "Emily Davis has built numerous full stack applications...",
-    prerequisites: "A basic knowledge about Node.js. Just that."
+    course_name: "PlayCraftAcademy: Refine Your Advanced Piano Skills",
+    syllabus: "Enhance your skills with advanced techniques, improvisation, and expressive playing.",
+    instructor_bio: "Emily Davis, a piano virtuoso, specializes in teaching advanced players to refine their craft.",
+    prerequisites: "Intermediate piano skills and a piano or keyboard."
   },
   5: {
-    course_name: "Create your first own server less web app",
-    syllabus: "Use various AWS products like: S3 bucket, EC2 and many more..",
-    instructor_bio: "Chris Wilson is a AWS guru...",
-    prerequisites: "AWS account…"
+    course_name: "PlayCraftAcademy: Master Authentic Pasta Cooking",
+    syllabus: "Learn to make pasta from scratch and cook authentic Italian sauces and dishes.",
+    instructor_bio: "Chef Marco Rossi, an Italian culinary expert, shares his secret family recipes.",
+    prerequisites: "Basic kitchen tools, ingredients, and a love for Italian cuisine."
+  },
+  6: {
+    course_name: "PlayCraftAcademy: Mastering the Art of Khichdi",
+    syllabus: "Explore diverse variations of Khichdi and learn the perfect cooking techniques.",
+    instructor_bio: "Chef Aditi Verma, a culinary artist, brings Indian comfort food to life with flair.",
+    prerequisites: "A kitchen setup and an interest in traditional Indian dishes."
+  },
+  7: {
+    course_name: "PlayCraftAcademy: Potato Lovers’ Culinary Course",
+    syllabus: "Discover creative recipes for making the most out of potatoes, from snacks to main courses.",
+    instructor_bio: "Chef Henry Brown, a versatile chef, celebrates the humble potato with delicious innovations.",
+    prerequisites: "A love for potatoes and access to a basic kitchen."
+  },
+  8: {
+    course_name: "PlayCraftAcademy: Master Chess Opening Strategies",
+    syllabus: "Learn key opening strategies to dominate the early stages of your chess games.",
+    instructor_bio: "Grandmaster Sergey Ivanov specializes in opening theories and tactics.",
+    prerequisites: "A chessboard and basic understanding of the rules of chess."
+  },
+  9: {
+    course_name: "PlayCraftAcademy: Mastering the Queen's Gambit",
+    syllabus: "Deep dive into the Queen's Gambit, explore tactics, and learn how to use it effectively.",
+    instructor_bio: "Chess prodigy Anna Petrova is renowned for her strategic mastery of the Queen's Gambit.",
+    prerequisites: "Intermediate chess skills and a desire to improve your game strategy."
   }
 };
+
 
 const CourseDetails = () => {
   const { id } = useParams();

@@ -1,36 +1,68 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import course1 from "../../assets/courses-images/1.png";
-import course2 from "../../assets/courses-images/2.png";
-import course3 from "../../assets/courses-images/3.png";
-import course4 from "../../assets/courses-images/4.png";
-import course5 from "../../assets/courses-images/5.png";
+
+
+import beginnerGuitarCourse from '../../assets/courses-images/beginner-Guitar-Course.jpg';
+import advancedGuitarCourse from '../../assets/courses-images/advanced-Guitar-Course.jpg';
+import beginnerPianoCourse from '../../assets/courses-images/beginner-Piano-Course.jpeg';
+import advancedPianoCourse from '../../assets/courses-images/advanced-Piano-Course.jpeg';
+import authenticPastaCooking from '../../assets/courses-images/master-Authentic-Pasta-Cooking.jpg';
+import artOfKhichdi from '../../assets/courses-images/mastering-the-Art-of-Khichdi.jpg';
+import potatoCulinary from '../../assets/courses-images/potato-Lovers-Culinary-Course.jpg';
+import chessOpenings from '../../assets/courses-images/mastering-Opening-Strategy.jpg';
+import queensGambit from '../../assets/courses-images/mastering-the-Queens-Gambit.jpeg';
+
+
 
 const courses = [
   {
     id: 1,
-    name: "Learn About Kafka and Node.js",
+    name: "PlayCraftAcademy: Start Your Acoustic Guitar Journey",
     price: 30,
-    imageUrl: course1,
+    imageUrl: beginnerGuitarCourse,
   },
-  { id: 2, name: "React, but with webpack", price: 20, imageUrl: course2 },
+  { id: 2, name: "PlayCraftAcademy: Master Advanced Guitar Techniques", price: 20, imageUrl: advancedGuitarCourse},
   {
     id: 3,
-    name: "Learn About Terraform in Depth",
+    name: "PlayCraftAcademy: Piano Basics for Beginners",
     price: 20,
-    imageUrl: course3,
+    imageUrl: beginnerPianoCourse,
   },
   {
     id: 4,
-    name: "Kubernetes and Docker for deployment",
+    name: "PlayCraftAcademy: Refine Your Advanced Piano Skills",
     price: 30,
-    imageUrl: course4,
+    imageUrl: advancedPianoCourse,
   },
   {
     id: 5,
-    name: "Create your own Serverless web app",
+    name: "PlayCraftAcademy: Master Authentic Pasta Cooking",
     price: 40,
-    imageUrl: course5,
+    imageUrl: authenticPastaCooking,
+  },
+  {
+	id: 6,
+    name: "PlayCraftAcademy: Mastering the Art of Khichdi",
+    price: 40,
+    imageUrl: artOfKhichdi,
+  },
+  {
+	id: 7,
+    name: "PlayCraftAcademy: Potato Lovers’ Culinary Course",
+    price: 40,
+    imageUrl: potatoCulinary,
+  },
+  {
+	id: 8,
+    name: "PlayCraftAcademy: Master Chess Opening Strategies",
+    price: 40,
+    imageUrl: chessOpenings,
+  },
+  {
+	id: 9,
+    name: "PlayCraftAcademy: Mastering the Queen's Gambit",
+    price: 40,
+    imageUrl: queensGambit,
   },
 ];
 

@@ -9,34 +9,33 @@ import Mike from "./assets/testimonials-images/mike.jpg";
 const testimonials = [
   {
     id: 1,
-    text: "FewLearns have been a great resource for me. I've learned so much from their courses. I would recommend them to anyone. 🥰",
+    text: "PlayCraftAcademy courses have been a fantastic resource for me. I've learned so much from the cooking classes. I would recommend them to anyone interested in expanding their culinary skills. 🥘",
     author: "Jane Steiner",
-    title: "VP Sales at Google",
+    title: "Food Blogger",
     imageUrl: Jane,
   },
   {
     id: 2,
-    text: "The K8s course has been a game changer for me. This is how you explain complex topics in a simple way. Thanks for the great content, FewLearns!",
+    text: "The music courses at PlayCraftAcademy have been a game-changer for me. The way they explain complex topics in a simple way is amazing. Thanks for the great content!",
     author: "Chris Ambrose",
-    title: "Lead marketer at Netflix",
+    title: "Music Enthusiast",
     imageUrl: Chris,
   },
   {
     id: 3,
-    text: "This is an amazing course. Just finished the React course and I'm already seeing the benefits. Thanks for the great content.",
+    text: "I've just completed a chess course and it has greatly improved my game. The instructors at PlayCraftAcademy are top-notch!",
     author: "Leslie Winn",
-    title: "Co-founder of Acme Inc",
+    title: "Chess Champion",
     imageUrl: Leslie,
   },
   {
     id: 4,
-    text: "An useful resource for learning web development.",
+    text: "An invaluable resource for learning about music instruments.",
     author: "Mike Winn",
-    title: "Co-founder of Acme Inc",
+    title: "Music Teacher",
     imageUrl: Mike,
   },
 ];
-
 const MainPage = () => {
   return (
     <>
@@ -95,7 +94,7 @@ const MainPage = () => {
             </div>
           </div>
 
-          {/* What is FewvLearns */}
+          {/* What is PlayCraftAcademy */}
 
           <div className="my-24 max-w-5xl mx-auto px-10">
             <div className="mx-auto py-12">
@@ -111,18 +110,14 @@ const MainPage = () => {
                   ?
                 </p>
                 <p className="mt-4 max-w-2xl text-lg text-gray-200 lg:mx-auto">
-                  We are a team of developers who are passionate about building
-                  modern web applications and sharing our knowledge with the
-                  community.
+                PlayCraftAcademy is your gateway to unlocking your creative potential through engaging courses in chess, cooking, music, and drawing. Join us to explore, learn, and excel in the arts!
                 </p>
               </div>
 
               <div className="mt-10">
                 <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
                   <div className="relative bg-[#001313] shadow-sm shadow-green-300 md:px-8 rounded-2xl md:py-8 hover:shadow-green-300 transform transition-transform duration-300 hover:scale-105 p-4 text-xl">
-                    1. FewVLearns is a platform for learning web development. We
-                    offer courses on various topics like React, Node.js,
-                    Kubernetes, and more.
+                    1. PlayCraftAcademy is a platform for learning 
                   </div>
 
                   <div className="relative bg-[#001313] shadow-sm shadow-green-300 md:px-8 rounded-2xl md:py-8 hover:shadow-green-300 transform transition-transform duration-300 hover:scale-105 p-4 text-xl">
@@ -131,13 +126,12 @@ const MainPage = () => {
                   </div>
 
                   <div className="relative bg-[#001313] shadow-sm shadow-green-300 md:px-8 rounded-2xl md:py-8 hover:shadow-green-300 transform transition-transform duration-300 hover:scale-105 p-4 text-xl">
-                    3. We have a team of experienced developers who are
-                    passionate about teaching and helping others learn.
+                    3. PlayCraftAcademy has a diverse team of instructors and content creators who are experts in their respective fields—such as cooking, music, and chess.
                   </div>
 
                   <div className="relative bg-[#001313] shadow-sm shadow-green-300 md:px-8 rounded-2xl md:py-8 hover:shadow-green-300 transform transition-transform duration-300 hover:scale-105 p-4 text-xl">
                     4. Our goal is to provide you with the knowledge and skills
-                    you need to succeed in the tech industry.
+                    you need to succeed in your respective field.
                   </div>
                 </dl>
               </div>
@@ -155,7 +149,7 @@ const MainPage = () => {
               </h2>
               <p className="py-4 text-lg leading-normal lg:text-xl xl:text-xl text-gray-300">
                 Here are some testimonials from our students who have taken our
-                web development course. We are proud to have helped them achieve
+                various courses. We are proud to have helped them achieve
                 their goals.
               </p>
             </div>

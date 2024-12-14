@@ -7,27 +7,27 @@ import Emily from "./assets/testimonials-images/Emily.png";
 const people = [
   {
     name: "Leslie Alexander",
-    role: "Front-End Developer",
+    role: "Chess Coach",
     imageUrl: Leslie,
   },
   {
     name: "Jane Cooper",
-    role: "AWS Certified Solutions Architect",
+    role: "Cooking Instructor",
     imageUrl: Jane,
   },
   {
-    name: "Mike Jhonson",
-    role: "Terraform Expert",
+    name: "Mike Johnson",
+    role: "Music Mentor",
     imageUrl: Mike,
   },
   {
     name: "Emily Davis",
-    role: "DevOps Engineer",
+    role: "Drawing Tutor",
     imageUrl: Emily,
   },
   {
     name: "Chris Wilson",
-    role: "Software Engineer",
+    role: "Creative Facilitator",
     imageUrl: Chris,
   },
 ];

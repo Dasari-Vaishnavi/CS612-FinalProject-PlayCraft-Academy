@@ -18,11 +18,15 @@ const checkPurchasedCourses = async (userId, courseIds) => {
 };
 
 const storeItems = new Map([
-  [1, { priceInCents: 3000, name: "Learn About Kafka and Node.js"}],
-  [2, { priceInCents: 2000, name: "React, but with webpack" }],
-  [3, { priceInCents: 2000, name: "Learn About Terraform in Depth" }],
-  [4, { priceInCents: 3000, name: "Kubernetes and Docker for deployment" }],
-  [5, { priceInCents: 4000, name: "Create your own Serverless web app" }],
+  [1, { priceInCents: 3000, name: "PlayCraftAcademy: Start Your Acoustic Guitar Journey"}],
+  [2, { priceInCents: 2000, name: "PlayCraftAcademy: Master Advanced Guitar Techniques" }],
+  [3, { priceInCents: 2000, name: "PlayCraftAcademy: Piano Basics for Beginners" }],
+  [4, { priceInCents: 3000, name: "PlayCraftAcademy: Refine Your Advanced Piano Skills" }],
+  [5, { priceInCents: 4000, name: "PlayCraftAcademy: Master Authentic Pasta Cooking" }],
+  [6, { priceInCents: 4000, name: "PlayCraftAcademy: Mastering the Art of Khichdi" }],
+  [7, { priceInCents: 4000, name: "PlayCraftAcademy: Potato Lovers’ Culinary Course" }],
+  [8, { priceInCents: 4000, name: "PlayCraftAcademy: Master Chess Opening Strategies" }],
+  [9, { priceInCents: 4000, name: "PlayCraftAcademy: Mastering the Queen's Gambit" }],
 ]);
 
 exports.createCheckoutSession = async (req, res) => {

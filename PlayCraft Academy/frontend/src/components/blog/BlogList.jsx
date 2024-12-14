@@ -6,10 +6,60 @@ const BlogList = () => {
 
   useEffect(() => {
     const blogFiles = [
-      { id: 'generate-jwt', title: 'FEWV Seconds of Learning How to Generate a JWT?', description: 'Learn how to generate a JSON Web Token (JWT) in just a few seconds.', tags: ['React', 'JavaScript'] },
-      { id: 'learn-docker', title: 'FEWV Seconds of Learning How to Containerize?', description: 'Learn how to containerize your applications using Docker.', tags: ['Docker', 'Node.js'] },
-      { id: 'learn-figma-react', title: 'FEWV Seconds of Learning Convert Figma to React?', description: 'Learn how to convert Figma designs to React components.', tags: ['Figma', 'React.js'] },
-      { id: 'k8s-basics', title: 'Learn Kubernetes Basics in Just a Few Seconds', description: 'Get started with Kubernetes and learn the basics in just a few seconds.', tags: ['K8s', 'Node.js'] },
+      {
+        id: "beginner-acoustic-guitar-lesson",
+        title: "PlayCraftAcademy: Start Your Acoustic Guitar Journey",
+        description: "Begin your musical adventure with PlayCraftAcademy! Learn basic chords, strumming patterns, and your first melody to start playing acoustic guitar today.",
+        tags: ["Acoustic Guitar", "Beginner Lessons"]
+      },
+      {
+        id: "advanced-guitar-techniques",
+        title: "PlayCraftAcademy: Master Advanced Guitar Techniques",
+        description: "Take your skills to the next level with advanced techniques like fingerpicking, tapping, and alternate picking, brought to you by PlayCraftAcademy.",
+        tags: ["Advanced Guitar", "Fingerpicking", "Tapping"]
+      },
+      {
+        id: "piano-basics-beginners",
+        title: "PlayCraftAcademy: Piano Basics for Beginners",
+        description: "Learn fundamental piano techniques, scales, and your first song with PlayCraftAcademy’s beginner-friendly course.",
+        tags: ["Beginner Piano", "Scales"]
+      },
+      {
+        id: "advanced-piano-course",
+        title: "PlayCraftAcademy: Refine Your Advanced Piano Skills",
+        description: "Elevate your piano playing with lessons on arpeggios, advanced compositions, and performance skills from PlayCraftAcademy.",
+        tags: ["Advanced Piano"]
+      },
+      {
+        id: "authentic-pasta-cooking",
+        title: "PlayCraftAcademy: Master Authentic Pasta Cooking",
+        description: "Discover traditional pasta-making techniques, from fresh dough preparation to classic sauces, with PlayCraftAcademy.",
+        tags: ["Pasta Cooking", "Authentic Recipes"]
+      },
+      {
+        id: "mastering-the-art-of-khichdi",
+        title: "PlayCraftAcademy: Mastering the Art of Khichdi",
+        description: "Learn how to cook perfect khichdi variations, blending spices and textures for this comforting Indian dish, with PlayCraftAcademy.",
+        tags: ["Khichdi Cooking", "Indian Cuisine"]
+      },
+      {
+        id: "potato-lovers-culinary-course",
+        title: "PlayCraftAcademy: Potato Lovers’ Culinary Course",
+        description: "Explore the versatility of potatoes with recipes for creamy mash, crispy fries, and innovative dishes in this PlayCraftAcademy course.",
+        tags: ["Potato Recipes", "Culinary Creativity"]
+      },
+      {
+        id: "chess-opening-strategies",
+        title: "PlayCraftAcademy: Master Chess Opening Strategies",
+        description: "Learn the principles behind strong chess openings, from classical openings to modern strategies, in this PlayCraftAcademy series.",
+        tags: ["Chess Openings", "Chess Strategies", "Game Theory"]
+      },
+      {
+        id: "mastering-queens-gambit",
+        title: "PlayCraftAcademy: Mastering the Queen's Gambit",
+        description: "Dive deep into the Queen’s Gambit, exploring its variations and strategies to dominate your chess games with PlayCraftAcademy.",
+        tags: ["Queen's Gambit", "Chess Variations"]
+      }
     ];
     setBlogs(blogFiles);
   }, []);

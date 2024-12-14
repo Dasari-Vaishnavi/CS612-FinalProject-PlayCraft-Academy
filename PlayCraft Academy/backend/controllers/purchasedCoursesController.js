@@ -9,6 +9,8 @@ exports.getPurchasedCourses = async (req, res) => {
       "SELECT id, email FROM users WHERE username = ?",
       [username]
     );
+
+    console.log("inside")
  
     if (userResults.length === 0) {
       return res.status(400).send("User does not exist");
@@ -24,6 +26,8 @@ exports.getPurchasedCourses = async (req, res) => {
     `;
     const [results] = await connection.query(sql, [userId]);
     res.json(results);
+
+    console.log(response);
   } catch (err) {
     console.error("Error fetching purchased courses:", err);
     res.status(500).send("Error fetching purchased courses");
